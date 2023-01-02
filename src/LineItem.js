@@ -1,5 +1,5 @@
 import {FaTrashAlt} from 'react-icons/fa'
-const lineItem = ({deleteItems,item,handleCheck,handleDelete,handleDeleteItems}) => {
+const lineItem = ({item,handleCheck,handleDelete,handleDeleteItems}) => {
   return (
     <li className="item" key = {item.id}>
               <input type="checkbox"
@@ -16,7 +16,9 @@ const lineItem = ({deleteItems,item,handleCheck,handleDelete,handleDeleteItems})
               role="button"
               onClick={() =>{
                 handleDelete(item.id)
-                // (item.checked ? () => {handleDeleteItems(item.id)} : {deleteItems})
+                handleDeleteItems(item.id)
+                // console.log(item.checked)
+                // {(item.checked === false) ? {(item) => handleDeleteItems(item.id)} : deleteItems}
               }}
               tabIndex="0"
               aria-label={`Delete ${item.item}`}
