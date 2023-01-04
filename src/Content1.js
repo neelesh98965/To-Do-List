@@ -13,18 +13,18 @@ const Content1 = ({cnt,deleteItems,handleDelete1}) => {
                 />
                 <label 
                 style={ {textDecoration: 'line-through'} }
-                >{item[0].item}</label>
+                >{item.item}</label>
                 <FaTrashAlt 
                 role="button"
-                onClick={() => handleDelete1(item[0].id)}
+                onClick={() => handleDelete1(item.id)}
                 tabIndex="0"
-                aria-label={`Delete ${item[0].item}`}
+                aria-label={`Delete ${item.item}`}
                 />
                 </li>
             ))}
             </ul>
         ):(
-        <p style={{marginTop: '2rem'}}>Your list is Empty.</p>
+        <p style={{marginTop: '3rem'}}>Your haven't completed any Tasks.</p>
       )}  
     </main>
   )

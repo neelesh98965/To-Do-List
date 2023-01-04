@@ -1,7 +1,7 @@
 
 const Header = ({title}) => {
   const headerStyle = {
-    backgroundColor: 'mediumblue',
+    backgroundColor: 'black',
     color : 'white'
 };
   return <header style={headerStyle}>

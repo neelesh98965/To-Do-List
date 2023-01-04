@@ -45,7 +45,7 @@ var cnt = 0
   
 
   const handleDeleteItems = (id) =>{
-    const deletedListItem = items.filter(item => item.id === id);
+    const deletedListItem = items.find(item => item.id === id);
     const listItems = [...deleteItems , deletedListItem]
     setAndSaveDeletedItems(listItems)
   }
@@ -60,11 +60,10 @@ var cnt = 0
     setAndSaveItems(listItems)
   }
 
-  // const handleDelete1 = (id) => {
-  //   const listItems = deleteItems.filter((item) => item.id !== id)
-  //   console.log(listItems)
-  //   setAndSaveDeletedItems(listItems)
-  // }
+  const handleDelete1 = (id) => {
+    const listItems = deleteItems.filter((item) => item.id !== id)
+    setAndSaveDeletedItems(listItems)
+  }
   
   const handleSubmit = (e)=>{ 
     e.preventDefault();
@@ -81,7 +80,7 @@ var cnt = 0
 
   return (
     <div className="App">
-    <Header title = "Grocery List"/>
+    <Header title = "TO Do List"/>
     <AddItem
     newItem = {newItem}
     setNewItem = {setNewItem}
@@ -100,7 +99,7 @@ var cnt = 0
     <Content1
     cnt = {cnt}
     deleteItems={deleteItems}
-    // handleDelete1 = {handleDelete1}
+    handleDelete1 = {handleDelete1}
     />
     <Footer 
     length = {items.length}

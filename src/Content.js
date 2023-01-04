@@ -14,7 +14,7 @@ const Content = ({items,handleCheck,handleDelete,handleDeleteItems,deleteItems})
         deleteItems = {deleteItems}
         />
       ) : (
-        <p style={{marginBottom: '2rem'}}>Your list is Empty.</p>
+        <p style={{marginTop: '3rem'}}>Your list is Empty.</p>
       )}
     </main>
   )
